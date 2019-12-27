@@ -1,5 +1,5 @@
 import pytest
-from trial4_first_assignment import dividenum, multiplynum
+from trial4_first_assignment import dividenum, multiplynum, addnumber, subnum
 
 
 @pytest.mark.parametrize(
@@ -16,3 +16,19 @@ def test_divide(x, y, result):
 )
 def test_multiply(x, y, expected):
     assert multiplynum(x, y) == expected
+
+
+@pytest.mark.parametrize(
+    "x,y,expected",
+    [(5, 4, 9), (3, 10, 13), pytest.param(90, 10, 110, marks=pytest.mark.xfail)],
+)
+def test_add(x, y, expected):
+    assert addnumber(x, y) == expected
+
+
+@pytest.mark.parametrize(
+    "x,y,result",
+    [(10, 8, 2), (100, 50, 50), pytest.param(90, 10, 110, marks=pytest.mark.xfail)],
+)
+def test_substract(x, y, result):
+    assert subnum(x, y) == result
