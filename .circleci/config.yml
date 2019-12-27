@@ -48,8 +48,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            PYTHONPATH=./src
-            pytest ./test
+            PYTHONPATH=./src py.test
 
       - store_artifacts:
           path: test-reports
