@@ -1,5 +1,5 @@
 import pytest
-from trial4_first_assignment import dividenum, multiplynum, addnumber, subnum
+from trial4 import dividenum, multiplynum, addnumber, subnum
 
 
 @pytest.mark.parametrize(
