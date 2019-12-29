@@ -1,3 +1,7 @@
 .idea*
 .pytest*
 test/.pytest*
+*.egg-info
+build/
+dist/
+.installed.cfg
